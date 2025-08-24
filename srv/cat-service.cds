@@ -67,5 +67,6 @@ service CatalogService @(path: 'CatalogService') {
         };
 
     function getOrderDefaults() returns PurchaseOrderSet;
+    function testhttp() returns String;
     entity POItems            as projection on db.transaction.poitems;
 }

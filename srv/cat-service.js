@@ -15,7 +15,9 @@ module.exports = cds.service.impl( async function(){
             req.error(500, "Please get the approval from your line account manager");
         }
     });
-
+    this.on('testhttp', async(req)=>{
+        return 'Testing passed..!';
+    });
     this.on('discountOnPrice', async(req, res) =>{
         try {
             const ID = req.params[0].NODE_KEY;
